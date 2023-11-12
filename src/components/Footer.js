@@ -1,8 +1,7 @@
 import React from 'react'
-import { Button } from './Button'
 import './Footer.css'
 import { Link } from 'react-router-dom'
-import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
@@ -34,7 +33,7 @@ function Footer() {
 
         <section className="social-media">
             <div className="social-media-wrap">
-                <img className="social-logo" src='images/Logo.png' />   
+                <img className="social-logo" src='images/Logo.png' alt='Logo' />   
             </div>             
             <div className="social-media-wrap2">
                 <small className='website-rights'>Top Of The Table Minis</small> 
@@ -45,7 +44,7 @@ function Footer() {
                         className='social-icon-link'
                         to='/'
                         target="_blank" 
-                        aria-aria-label='Instagram'
+                        aria-label='Instagram'
                     >
                         <FontAwesomeIcon icon={faInstagram}/>
                     </Link>
@@ -53,7 +52,7 @@ function Footer() {
                         className='social-icon-link'
                         to='/'
                         target="_blank" 
-                        aria-aria-label='Youtube'
+                        aria-label='Youtube'
                     >
                         <FontAwesomeIcon icon={faYoutube}/>
                     </Link>
@@ -61,7 +60,7 @@ function Footer() {
                         className='social-icon-link'
                         to='/'
                         target="_blank" 
-                        aria-aria-label='Youtube'
+                        aria-label='Youtube'
                     >
                         <FontAwesomeIcon icon={faXTwitter}/>
                     </Link>

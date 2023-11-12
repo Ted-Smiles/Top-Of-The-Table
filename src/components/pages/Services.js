@@ -7,7 +7,6 @@ import PricingGuide from '../PricingGuide'
 export default function Services() {
     return (
         <>
-            <h1 className='services'>SERVICES</h1>
             <Cards3 />
             <PricingGuide />
             <Footer />
