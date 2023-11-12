@@ -20,13 +20,14 @@
   font-size: 60px;   
   text-decoration: none;
   align-items: center;
+  justify-items: center;
 } 
   
 .Navlogo {
   color: #768063;
   margin-left: 0.8rem;
   width: 60px;
-  align-self: baseline;
+  align-self: center;
 }
   
 .nav-menu {
@@ -125,10 +126,11 @@
     top: 0;
     left: 0;
     transform: translate(5%, 50%);
+    font-size: 26px;
   }
 
-  .logo {
-      width: 40px;
+  .Navlogo {
+      width: 50px;
   }
 
   .menu-icon {
@@ -136,7 +138,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 70%);
+    transform: translate(-100%, 100%);
     cursor: pointer;
     color: #768063;
     font-size: 1.8rem;
