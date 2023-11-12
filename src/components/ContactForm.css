@@ -1,0 +1,233 @@
+.contact-form1 {
+    padding-bottom: 100px;
+    color: #768063;
+    background: #768063;
+}
+.containers {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;     
+}
+
+.container1 {
+    background: #fff;
+    height: 100%;
+    width: 80%;
+    padding: 25px 40px 10px 40px;
+    margin: 100px 30px 60px 30px;
+}
+
+.container2 {
+    width: 80%;
+    background: #fff;
+    height: 100%x;
+    padding: 25px 80px 10px 80px;
+    margin: 20px 30px 100px 30px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.container1 > h1 {
+    color: #768063;
+    font-size: 50px;
+    margin-top: -100px;
+    text-align: center;
+}
+
+.container1 > p {
+    margin: 8px 20px 10px 20px;
+    color: #768063;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.container1 .text {
+    margin-left: 30%;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    background: #768063;
+    color: #f1f2ef;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: 40%;
+}
+
+.container2 form .form-row{
+    display: flex;
+    margin: 32px 0;
+}
+
+form .form-row .input-data{
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative;
+}
+
+form .form-row .textarea{
+    height: 100px;
+}
+
+.input-data input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 17px;
+    outline: none;
+}
+
+.textarea textarea{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0.1px;
+    font-size: 17px;
+    outline: none;
+}
+
+.input-data input:focus ~ label, .input-data input:valid ~ label{
+    transform: translateY(-28px);
+    font-size: 14px;
+}
+
+.textarea textarea:focus ~ label, .textarea textarea:valid ~ label{
+    transform: translateY(-54px);
+    font-size: 14px;
+    outline: #768063;
+}
+
+.textarea textarea{
+    resize: none;
+    padding-top: 10px;
+}
+
+.input-data label{
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.textarea label{
+    width: 100%;
+    bottom: 40px;
+    background: #fff;
+}
+
+.input-data .underline {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+
+.input-data .underline:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #768063;
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before {
+    transform: scale(1.02) translateX(-4px);
+    height: 3px;
+}
+
+.submit-btn .input-data {
+    overflow: hidden;
+    height: 45px;
+    width: 25%;
+    border-radius: 10px;    
+    margin-left: 300px;
+}
+
+.form-row.submit-btn {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.submit-btn .input-data .inner {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #768063;
+    transition: all 0.4s;
+}
+
+.submit-btn .input-data:hover .inner {
+    left: 0;
+}
+
+.submit-btn .input-data input {
+    background: none;
+    border: none;
+    color: #768063;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    color: #f1f2ef;
+}
+
+
+@media (max-width: 700px) {
+    .contact-form1 {
+        display: inline-block;
+    }
+    .container1, .container2 {
+        width: 90%;
+        padding: 15px 5px 5px 5px;
+        margin: 10px 5px 50px 5px;
+    }
+    .container1 .text {
+        font-size: 30px;
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .container2 form {
+        padding: 10px 0 0 0;
+    }
+
+    .container2 form .form-row {
+        display: block;
+    }
+
+    form .form-row .input-data {
+        margin: 35px 0!important;
+    }
+
+    .submit-btn .input-data {
+        width: 40%!important;
+
+    }
+
+    .input-data input:focus ~ .underline:before,
+    .input-data input:valid ~ .underline:before,
+    .textarea textarea:focus ~ .underline:before,
+    .textarea textarea:valid ~ .underline:before {
+        transform: scale(1.02);
+        height: 3px;
+    }
+
+    .form-row.submit-btn {
+        width: 100%;        
+    }
+}
