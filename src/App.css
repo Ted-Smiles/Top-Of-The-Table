@@ -8,7 +8,6 @@
   .home,
   .services,
   .gallery,
-  .blog,
   .contact,
   .sign-up {
     display: flex;
@@ -29,7 +28,7 @@
   }
   
   .services {
-    background-image: url('./components/images/mainPage2.png');
+    background-image: url('./images/mainPage2.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,7 +36,7 @@
   }
 
   .gallery {
-    background-image: url('./components/images/mainPage3.png');
+    background-image: url('./images/mainPage3.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -45,15 +44,13 @@
   }
 
   .blog {
-    background-image: url('./components/images/mainPage4.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
     font-size: 100px;
   }
   
   .contact {
-    background-image: url('./components/images/mainPage5.png');
+    background-image: url('./images/mainPage5.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -61,7 +58,7 @@
   }
 
   .sign-up {
-    background-image: url('./components/images/mainPage3.png');
+    background-image: url('./images/mainPage3.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -72,7 +69,6 @@
   .home,
   .services,
   .gallery,
-  .blog,
   .contact,
   .sign-up {
     font-size: 80px;

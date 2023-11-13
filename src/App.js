@@ -2,12 +2,12 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from './components/pages/Home';
-import Services from './components/pages/Services';
-import Gallery from './components/pages/Gallery';
-import Contact from './components/pages/Contact';
-import SignUp from './components/pages/SignUp';
-import Blog from './components/pages/Blog';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Gallery from './pages/Gallery';
+import Contact from './pages/Contact';
+import SignUp from './pages/SignUp';
+import Blog from './pages/Blog';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
