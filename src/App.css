@@ -11,7 +11,7 @@
   .contact,
   .sign-up {
     display: flex;
-    height: 95vh;
+    height: 100%;
     align-items: center;
     justify-content: center;
     font-size: 4rem;
@@ -75,3 +75,4 @@
     height: 90vh;
   }
 }
+

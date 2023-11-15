@@ -36,8 +36,8 @@
 .home-container > img {
     color: #f1f2ed;
     width: 400px;
-    margin-top: -300px;
-    margin-bottom: 200px;
+    margin-top: -15vh;
+    margin-bottom: 20vh;
 }
 
 .home-container > h1 {
@@ -73,22 +73,21 @@
     margin: 6px;
 }
 
-.movie {
-    display: flex;
-    align-items: start;
-    align-self: flex-start;
-    align-content: start;
-    justify-self: start;
-    justify-items: start;
-    justify-content: start;
-    font-size: 100px;
-    color: #768063;
-    background-color: #f1f2ed;
+@media screen and (max-width: 1200px) {
+    .home-container > h1 {
+        font-size: 80px;
+    }
+    .home-container > p {
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 960px) {
     .home-container > h1 {
-        font-size: 70px;
+        font-size: 60px;
+    }
+    .home-container > p {
+        font-size: 28px;
     }
 }
 
