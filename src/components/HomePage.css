@@ -1,7 +1,7 @@
 .home-container {
     background: url("../images/mainPage1.png") center center/cover no-repeat;
     background-color: #768063;
-    height: 110vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -10,6 +10,7 @@
     object-fit: contain;
     text-align: center;
     opacity: 0.9;
+    padding: 10px;
 }
 
 .try {
@@ -23,22 +24,21 @@
     display: flex;
     margin: 0px;
     flex: 1;
-    margin-bottom: -100px;
+
     align-items: start;
 }
 
 .second {
     display: flex;
     flex: -1;
-    margin-bottom: -100px;
+
     align-items: start;
 }
 
 .home-container > img {
     color: #f1f2ed;
     width: 400px;
-    margin-top: -20vh;
-    margin-bottom: 10vh;
+
 }
 
 .home-container > h1 {
