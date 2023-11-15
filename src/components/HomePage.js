@@ -3,7 +3,7 @@ import '../App.css';
 import './HomePage.css';
 import { Button } from './Button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 
 function HomePage() {
@@ -32,12 +32,13 @@ function HomePage() {
     return (
         <div className='home-container'>
             <img className='logo' src='images/Logo.png' alt='Logo'/>
-            <div className='try'>
-                <div className='first'><Button className='left' buttonSize='btn--large' buttonStyle='btn--secondary' onClick={changeImageMinus}><FontAwesomeIcon icon={faArrowLeft}/></Button></div>
-                <div className='second'><Button className='right' buttonSize='btn--large' buttonStyle='btn--primary' onClick={changeImagePlus}><FontAwesomeIcon icon={faArrowRight}/></Button></div>
-            </div>
+
             <h1>TOPOFTHETABLE.UK</h1>
             <p>Independent minature painter based in the UK</p>
+            <div className='try'>
+                <div className='first'><Button buttonSize='btn--large' buttonStyle='btn--secondary' onClick={changeImageMinus}><FontAwesomeIcon icon={faChevronLeft}/></Button></div>
+                <div className='second'><Button buttonSize='btn--large' buttonStyle='btn--secondary' onClick={changeImagePlus}><FontAwesomeIcon icon={faChevronRight}/></Button></div>
+            </div>
         </div>
 
   )

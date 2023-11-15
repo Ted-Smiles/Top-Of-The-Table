@@ -13,6 +13,7 @@
 }
 
 .try {
+    margin-top: 40px;
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -36,8 +37,8 @@
 .home-container > img {
     color: #f1f2ed;
     width: 400px;
-    margin-top: -15vh;
-    margin-bottom: 20vh;
+    margin-top: -20vh;
+    margin-bottom: 10vh;
 }
 
 .home-container > h1 {

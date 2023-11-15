@@ -27,9 +27,6 @@ h1 {
   margin-bottom: 24px;
 }
 
-.cards__item {
-}
-
 .cards__item__link {
   display: flex;
   flex-flow: column;
