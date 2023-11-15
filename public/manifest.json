@@ -1,0 +1,44 @@
+{
+    "short_name": "Top Of The Table",
+    "name": "Top Of The Table",
+    "start_url": ".",
+    "display": "standalone",
+    "description": "Miniture Figure Painter Website",
+    "icons": [
+      {
+        "src": "/images/Logo.jpg",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "/images/Logo.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/mainPage1.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "/images/mainPage2.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "/images/mainPage3.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "/images/mainPage4.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "/images/mainPage5.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
