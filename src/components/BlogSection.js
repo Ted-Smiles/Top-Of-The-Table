@@ -1,81 +1,116 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CardItem from './CardItem'
 import './BlogSection.css';
-import { GraphQLClient, gql } from 'graphql-request'
+import request, { GraphQLClient, gql } from 'graphql-request'
+import { useNavigate } from 'react-router-dom';
 
-const graphcms = new GraphQLClient('https://api-eu-west-2.hygraph.com/v2/clox175hi80uw01uqdjf6980x/master')
 
-const QUERY = gql `
-    {
+
+export default function BlogSection(streams) {
+
+    const graphcms = new GraphQLClient('https://api-eu-west-2.hygraph.com/v2/clox175hi80uw01uqdjf6980x/master')
+    
+    const QUERY = gql`
+    query {
         posts {
             id,
             title,
             datePublished,
             slug,
+            coverPhoto {
+                url
+            },
             content {
                 html
             }
-            coverPhoto {
-                url
-                }
-            }
         }
-    }
-`
+      }
+    `
+    const {posts} = graphcms.request(QUERY)
 
-export async function getStaticProps (){
-    const {posts} = await graphcms.request(QUERY)
-    return {
-        props: {
-            posts,
-        },
-        revalidate: 10,
-    }
-}
 
-function BlogSection() {
-  return (
-    <div className='blog'>
-        <h1>Recent Posts</h1>
-        <div className="blog__container">
-            <div className="blog__wrapper">
-                <ul className="blog__items">
+    getStaticProps()    
+    console.log(streams)
+
+
+    return (
+        <div className='blog'>
+            <h1>Recent Posts</h1>
+            <div className="blog__container">
+                <div className="blog__wrapper">
+                    {/*{posts.map((post) => ( */}
+                    <ul className="blog__items">        
+                        <CardItem 
+                            src="./images/P1020196.jpg"
+                            label=""
+                            title="A Double Header"
+                            date="12/09/2023"
+                            text="Summary"
+                            action="Read More..."
+                            path="/contact"
+                        />
+                        <CardItem 
+                            src="./images/P1020217.jpg"
+                            label=""
+                            title="Goonhammer Open"
+                            date="05/09/2023"
+                            text="Summary"
+                            action="Read More..."
+                            path="/contact"
+                        />
+                        <CardItem 
+                            src="./images/paradeGround.jpg"
+                            label=""
+                            title="Hellstorm All Stars 4"
+                            date="28/08/2023"
+                            text="Summary"
+                            action="Read More..."
+                            path="/contact"
+                        />
+                        <CardItem 
+                            src="./images/P1020221.jpg"
+                            text="..."
+                            path="/services"
+                        />
+                        <CardItem 
+                            src="./images/P1020222-2.jpg"
+                            text="..."
+                            path="/services"
+                        />
                     
-                    <CardItem 
-                        src="./images/P1020196.jpg"
-                        label="12/09/2023"
-                        text="A Double Header"
-                        path="/contact"
-                    />
-                    <CardItem 
-                        src="./images/P1020217.jpg"
-                        label="05/09/2023"
-                        text="Goonhammer Open"
-                        path="/contact"
-                    />
-                    <CardItem 
-                        src="./images/paradeGround.jpg"
-                        label="28/08/2023"
-                        text="Hellstorm All Stars 4"
-                        path="/contact"
-                    />
-                    <CardItem 
-                        src="./images/P1020221.jpg"
-                        text="..."
-                        path="/services"
-                    />
-                    <CardItem 
-                        src="./images/P1020222-2.jpg"
-                        text="..."
-                        path="/services"
-                    />
-                
-                </ul>
+                    </ul>
+                {/* ))} */}
+                </div>
             </div>
         </div>
-    </div>
-  )
+    )
 }
 
+export async function getStaticProps (){
+    const graphcms = new GraphQLClient('https://api-eu-west-2.hygraph.com/v2/clox175hi80uw01uqdjf6980x/master')
+    
+    const QUERY = gql`
+    query {
+        posts {
+            id,
+            title,
+            datePublished,
+            slug,
+            coverPhoto {
+                url
+            },
+            content {
+                html
+            }
+        }
+      }
+    `
+    const {posts :streams} = await graphcms.request(QUERY)
+    console.log(streams)
 
-export default BlogSection
+    return {
+        props: {
+            streams,
+        }
+    }
+}

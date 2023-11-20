@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function BlogItem(props) {
+function BlogItem({title, coverPhoto, datePublished, slug}) {
   return (
     <>
         <li className='blogs__item'>

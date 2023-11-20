@@ -53,11 +53,11 @@ h1 {
   overflow: hidden;
 }
 
-.cards__item__pic-wrap::after {
+/*.cards__item__pic-wrap::after {
   content: attr(data-category);
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -100px;
   padding: 6px 8px;
   max-width: calc((100%) - 60px);
   font-size: 18px;
@@ -65,7 +65,7 @@ h1 {
   color: #e2e5da;
   background-color: #768063;
   box-sizing: border-box;
-}
+} */
 
 .cards__item__img {
   position: absolute;

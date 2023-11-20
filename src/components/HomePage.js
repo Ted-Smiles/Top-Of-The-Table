@@ -8,6 +8,7 @@ import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons
 
 function HomePage() {
     var i = 2
+
     function changeImagePlus() { 
         i += 1
         if (i >= 6) {
@@ -26,13 +27,23 @@ function HomePage() {
             
         }
         var container = document.getElementsByClassName("home-container")[0]
-        container.style.background = 'url("./images/mainPage'+i+'.png") center center/cover no-repeat'     
+        container.style.background = 'url("./images/mainPage'+i+'.png") center center/cover no-repeat'   
     }
 
+    /* setInterval(function() {
+        var container = document.getElementsByClassName("home-container")[0]
+        container.style.background = 'url("./images/mainPage'+i+'.png") center center/cover no-repeat'   
+    
+        i++;
+    
+        if (i >= 6) {
+            i = 1;
+        }
+    }, 8000); */
+    
     return (
         <div className='home-container'>
             <img className='logo' src='images/Logo.png' alt='Logo'/>
-
             <h1>TOPOFTHETABLE.UK</h1>
             <p>Independent minature painter based in the UK</p>
             <div className='try'>
@@ -40,8 +51,7 @@ function HomePage() {
                 <div className='second'><Button buttonSize='btn--large' buttonStyle='btn--secondary' onClick={changeImagePlus}><FontAwesomeIcon icon={faChevronRight}/></Button></div>
             </div>
         </div>
-
-  )
+    )
 }
 
 

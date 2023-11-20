@@ -11,19 +11,19 @@ function Cards() {
                 <ul className="cards__items">
                     <CardItem 
                         src="./images/P1020196.jpg"
-                        label="Battle Ready"
+                        title="Battle Ready"
                         text="Find Out More"
                         path="/services"
                     />
                     <CardItem 
                         src="./images/P1020217.jpg"
-                        label="Tabletop"
+                        title="Tabletop"
                         text="Find Out More"
                         path="/services"
                     />
                     <CardItem 
                         src="./images/paradeGround.jpg"
-                        label="Parade Ground"
+                        title="Parade Ground"
                         text="Find Out More"
                         path="/services"
                     />
@@ -31,7 +31,7 @@ function Cards() {
                 <ul className="cards__items">
                     <CardItem 
                         src="./images/P1020196.jpg"
-                        label="More About Me"
+                        title="More About Me"
                         text="Hi, I'm Charles, a miniature painter based in the UK. I create youtube video and am available for comission.
                         My background is in Warhammer 40K, however I am more than happy to talk about any project.
                         Feel free to scroll through the gallery, check my blog and dont hesitate to reach out if you have any questions.

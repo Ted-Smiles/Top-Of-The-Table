@@ -42,7 +42,7 @@ function Footer() {
                 <div className="social-icons">   
                     <Link 
                         className='social-icon-link'
-                        to='/'
+                        to='https://www.instagram.com/top_of_the_table_minis/'
                         target="_blank" 
                         aria-label='Instagram'
                     >
@@ -50,7 +50,7 @@ function Footer() {
                     </Link>
                     <Link 
                         className='social-icon-link'
-                        to='/'
+                        to='https://www.youtube.com/@topofthetableminis/videos'
                         target="_blank" 
                         aria-label='Youtube'
                     >
@@ -58,7 +58,7 @@ function Footer() {
                     </Link>
                     <Link 
                         className='social-icon-link'
-                        to='/'
+                        to='https://twitter.com/i/flow/login?redirect_after_login=%2FTopOfTheTableUK'
                         target="_blank" 
                         aria-label='Youtube'
                     >
