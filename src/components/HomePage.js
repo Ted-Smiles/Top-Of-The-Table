@@ -8,6 +8,7 @@ import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons
 
 function HomePage() {
     var i = 2
+    var b = 1
 
     function changeImagePlus() { 
         i += 1
@@ -30,17 +31,31 @@ function HomePage() {
         container.style.background = 'url("./images/mainPage'+i+'.png") center center/cover no-repeat'   
     }
 
-    /* setInterval(function() {
+    var changeBackground = setInterval(function() {
+        
         var container = document.getElementsByClassName("home-container")[0]
-        container.style.background = 'url("./images/mainPage'+i+'.png") center center/cover no-repeat'   
-    
-        i++;
-    
-        if (i >= 6) {
-            i = 1;
+        b = 0 
+        if (window.location.pathname == '/') {
+            console.log(b)
+            if (b > 0) {
+                container.style.background = 'url("./images/mainPage'+i+'.png") center center/cover no-repeat'   
+            
+                i += 1
+            
+                if (i >= 6) {
+                    i = 1
+                }
+            } else {
+                clearInterval(changeBackground)
+            }
+        } else {
+        b = 0 
         }
-    }, 8000); */
-    
+
+    }, 8000)
+
+    console.log(b)
+
     return (
         <div className='home-container'>
             <img className='logo' src='images/Logo.png' alt='Logo'/>
