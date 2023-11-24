@@ -4,10 +4,10 @@ import './BlogSection.css';
 
 export default function GallerySection() {
     return (
-        <div className='blog'>
+        <div className='cards'>
             <h1>Recent Posts</h1>
-            <div className="blog__container">
-                <div className="blog__wrapper">
+            <div className="cards__container">
+                <div className="cards__wrapper">
                     <ul className="cards__items">
                         <CardItem 
                             src="./images/P1020221.jpg"

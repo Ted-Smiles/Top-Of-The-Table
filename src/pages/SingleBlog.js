@@ -4,7 +4,7 @@ import SinglePage from '../components/SinglePage'
 import Footer from '../components/Footer'
 
 
-export default function GenestealerCults() {
+export default function SingleBlog() {
     return (
         <>
             <SinglePage />

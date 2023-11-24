@@ -1,15 +1,16 @@
-import React from 'react';
-import Navbar from './components/Navbar';
+import React, { useEffect, useState } from 'react';
+import { lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
-import Services from './pages/Services';
-import Gallery from './pages/Gallery';
-import Contact from './pages/Contact';
-import SignUp from './pages/SignUp';
-import Blog from './pages/Blog';
-import ScrollToTop from './components/ScrollToTop';
-import GenestealerCults from './pages/GenstealerCults';
+import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop'
+const Home = lazy(() => import ('./pages/Home'))
+const Gallery = lazy (() => import ('./pages/Gallery'))
+const Services = lazy(() => import ('./pages/Services'))
+const Contact = lazy (() => import ('./pages/Contact'))
+const SignUp = lazy (() => import ('./pages/SignUp'))
+const Blog = lazy (() => import ('./pages/Blog'))
+const SingleBlog = lazy (() => import ('./pages/SingleBlog'))
 
 function App() {
   return (
@@ -17,15 +18,17 @@ function App() {
       <Router>
         <ScrollToTop />
         <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/genstealer-cult" element={<GenestealerCults />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/sign-up" element={<SignUp />} /> 
-        </Routes>
+        <Suspense fallback={<div className="container">Loading...</div>}>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<SingleBlog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/sign-up" element={<SignUp />} /> 
+          </Routes>
+        </Suspense>
       </Router>
     </>
   );

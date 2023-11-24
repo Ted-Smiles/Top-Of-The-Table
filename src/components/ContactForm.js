@@ -10,8 +10,9 @@ function ContactForm() {
 
     const onSubmit = async (e) => {
         e.preventDefault()
+        console.log("data", firstName, lastName, email, message)
 
-        try { 
+        {/*try { 
             const res = await fetch('../Contact', {
                 method: 'POST',
                 body: JSON.stringify({
@@ -23,7 +24,7 @@ function ContactForm() {
             })
         } catch(err) {
             console.error('Err', err)
-        }
+        } */}
     }
 
     return (

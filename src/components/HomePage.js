@@ -32,11 +32,9 @@ function HomePage() {
     }
 
     var changeBackground = setInterval(function() {
-        
+        b = 0; {/* Stops the rotaing background */}
         var container = document.getElementsByClassName("home-container")[0]
-        b = 0 
-        if (window.location.pathname == '/') {
-            console.log(b)
+        if (window.location.pathname === '/') {
             if (b > 0) {
                 container.style.background = 'url("./images/mainPage'+i+'.png") center center/cover no-repeat'   
             
@@ -52,7 +50,7 @@ function HomePage() {
         b = 0 
         }
 
-    }, 8000)
+    }, 4000)
 
     console.log(b)
 
