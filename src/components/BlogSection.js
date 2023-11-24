@@ -4,8 +4,6 @@ import './BlogSection.css'
 import './Cards.css';
 import request from 'graphql-request'
 
-var test = 'this is  a test'
-
 
  function BlogSection() {
 
