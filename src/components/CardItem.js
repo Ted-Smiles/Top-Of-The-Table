@@ -1,13 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+/**
+ * Creates a card using an image and text which can then link to another page to get more information
+ */
+
 function CardItem(props) {
     return (
         <>
             <li className='cards__item'>
                 <Link className="cards__item__link" to={props.path}>
                     <figure className='cards__item__pic-wrap'>
-                        <img src={props.src} alt="Miniture" className="cards__item__img" />
+                        <img src={props.src} alt={props.alt} className="cards__item__img" />
                     </figure>
                     <figure className='cards__item__text-wrap'>
                         <div className="cards__item__info">

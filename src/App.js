@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -11,6 +10,10 @@ const Contact = lazy (() => import ('./pages/Contact'))
 const SignUp = lazy (() => import ('./pages/SignUp'))
 const Blog = lazy (() => import ('./pages/Blog'))
 const SingleBlog = lazy (() => import ('./pages/SingleBlog'))
+
+/**
+ * General function including all the pages and route to each 
+ */
 
 function App() {
   return (

@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+/**
+ * Function to move the page position to top whenever there is a page change
+ */
+
 export default function ScrollToTop() {
   const { pathname } = useLocation();
 

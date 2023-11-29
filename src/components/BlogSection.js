@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import CardItem from './CardItem'
 import './BlogSection.css'
-import './Cards.css';
+import './Cards.css'
 import request from 'graphql-request'
 
+/**
+ * Front-page for blog page - fetches blog data found from Hygraph which it uses to create blog cards
+ */
 
- function BlogSection() {
+function BlogSection() {
 
     const [posts, setPosts] = useState(null)
 
@@ -34,38 +37,40 @@ import request from 'graphql-request'
             const post = posts.reverse()
             setPosts(post)
         }
-        fetchPosts()  
+        fetchPosts()
     }, [])
 
     console.log(posts)
 
-    if (posts === null) {
-        return (
-            <h1>Error</h1>
-        )
-    }else {
-        return (
-            <div className='blog'>
-                <h1>Recent Posts</h1>
-                <div className="blog__container">
-                    <div className="blog__wrapper">
-                        <ul className="blog__items">  
-                                 
-                            {posts.map(post => <CardItem 
+    return(
+        <div className='blog'>
+            <h1>Recent Posts</h1>
+            <div className="blog__container">
+                <div className="blog__wrapper">
+                    <ul className="blog__items">
+
+                        {posts === null ?
+                            (<CardItem
+                                src=""
+                                alt="Loading"
+                                title="Please Wait"
+                            />) :
+                            (posts.map(post => <CardItem
                                 src={post.coverPhoto.url}
+                                alt="Blog Photo"
                                 title={post.title}
                                 date={post.datePublished}
                                 text={post.summary}
                                 action="Read More..."
                                 path={post.slug}
-                            />)}
-                            
-                        </ul>
-                    </div>
+                            />))}
+
+                    </ul>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
+
 
 
 }

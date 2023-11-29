@@ -2,6 +2,10 @@ import React from 'react'
 import '../App.css'
 import './PricingGuide.css'
 
+/**
+ * Final section of the sevices page with text detailing the pricing
+ */
+
 function PricingGuide() {
     return (
         <div className='pricing-container'>

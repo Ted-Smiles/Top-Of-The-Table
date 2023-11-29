@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+/**
+ * Creates a blog card using an image and text which can then link to another page to get more information
+ */
+
 function BlogItem({title, coverPhoto, datePublished, slug}) {
   return (
     <>

@@ -1,6 +1,10 @@
 import React from 'react'
 import './Button.css'
 
+/**
+ * Buttons of various styles and sizes which can be called in other components
+ */
+
 const STYLES = ['btn--primary', 'btn--secondary', 'btn--outline']
 const SIZES = ['btn--medium', 'btn--large']
 

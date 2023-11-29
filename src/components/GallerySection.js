@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from 'react'
+
 import CardItem from './CardItem'
 import './BlogSection.css';
+
+/**
+ * Section at the top of the gallery to show the different categories for models
+ */
 
 export default function GallerySection() {
     return (

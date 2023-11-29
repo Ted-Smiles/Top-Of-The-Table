@@ -2,6 +2,10 @@ import React from 'react'
 import CardItem from './CardItem'
 import './Cards.css';
 
+/**
+ * Cards for Gallery page using CardItems
+ */
+
 function Cards2() {
     return (
         <div className='cards'>

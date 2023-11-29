@@ -5,6 +5,10 @@ import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 import { Button } from './Button';
 
+/**
+ * Navbar with links to each page, also becomes a burger menu when the screen size is smaller
+ */
+
 function Navbar() {
   const [click, setClick] = useState(false)
   const [button, setButton] =useState(true)

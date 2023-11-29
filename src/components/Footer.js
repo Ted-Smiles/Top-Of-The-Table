@@ -5,6 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { Button } from './Button';
 
+/**
+ * Footer for each page
+ */
+
 function Footer() {
   return (
     <div className='footer-container'>
