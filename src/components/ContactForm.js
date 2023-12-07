@@ -1,33 +1,33 @@
 import React, { useState } from 'react'
 import './ContactForm.css'
-
+import axios from 'axios';
 /**
  * Contact form for sending email direct to email address
  */
 
 function ContactForm() { 
-
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [email, setEmail] = useState('')
-    const [message, setMessage] = useState('')
+    
+    const [firstName, setFirstName] = useState('Ted')
+    const [lastName, setLastName] = useState('Smiles')
+    const [email, setEmail] = useState('tedsmiles01@gmail.com')
+    const [message, setMessage] = useState('Hi this is a test')
 
     const onSubmit = async (e) => {
         e.preventDefault()
         console.log("data", firstName, lastName, email, message)
 
         try { 
-            const res = await fetch('../Contact', {
+            const res = await axios.post('http://localhost:3001/send-email', {
                 method: 'POST',
-                body: JSON.stringify({
+                body: ({
                     firstName, lastName, email, message
                 }),
                 headers: {
                     'content-type': 'application/json'
                 }
             })
-        } catch(err) {
-            console.error('Err', err)
+        } catch(error) {
+            console.error('Error: ', error)
         }
     }
 

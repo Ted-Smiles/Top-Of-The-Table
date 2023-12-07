@@ -83,6 +83,13 @@ h1 {
   line-height: 24px;
 }
 
+.cards__item__title {
+  color: #768063;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 
 .cards__item2 {
   display: flex;

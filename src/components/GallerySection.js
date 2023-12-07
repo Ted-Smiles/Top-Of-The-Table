@@ -33,7 +33,7 @@ export default function GallerySection() {
                         <CardItem 
                             src="./images/P1020222-2.jpg"
                             title="Chaos Daemons"
-                            path="/services"
+                            path="/choas-daemons"
                         />
                     </ul>
                 </div>
