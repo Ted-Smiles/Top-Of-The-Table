@@ -6,7 +6,14 @@ import './Cards.css';
  * Cards for Gallery page using CardItems
  */
 
+
+
+
 function Cards2() {
+
+
+
+
     return (
         <div className='cards'>
             <h1>All Photos</h1>
@@ -32,29 +39,24 @@ function Cards2() {
                         <CardItem 
                             src="./images/P1020221.jpg"
                             text="..."
-                            path="/services"
                         />
                         <CardItem 
                             src="./images/P1020222-2.jpg"
                             text="..."
-                            path="/services"
                         />
                     </ul>
                     <ul className="cards__items">
                         <CardItem 
                             src="./images/P1020229.jpg"
                             text="More About Me"
-                            path="/services"
                         />
                         <CardItem 
                             src="./images/P1020322.jpg"
                             text="More About Me"
-                            path="/services"
                         />
                         <CardItem 
                             src="./images/mainPage.jpg"
                             text="More About Me"
-                            path="/services"
                         />
                     </ul>
                 </div>

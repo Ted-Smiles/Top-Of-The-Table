@@ -7,6 +7,7 @@ import axios from 'axios';
 
 function ContactForm() { 
     
+    const [emailSent, setEmailSent] = useState(false);
     const [firstName, setFirstName] = useState('Ted')
     const [lastName, setLastName] = useState('Smiles')
     const [email, setEmail] = useState('tedsmiles01@gmail.com')
@@ -25,9 +26,9 @@ function ContactForm() {
                 headers: {
                     'content-type': 'application/json'
                 }
-            })
+            }); setEmailSent(true);
         } catch(error) {
-            console.error('Error: ', error)
+            console.error('Error sending email: ', error)
         }
     }
 
@@ -75,6 +76,7 @@ function ContactForm() {
                                 <input type="submit" value="submit" />
                         </div>
                     </div>
+                    {emailSent && <div className="notification">Email sent successfully!</div>}
                     </form>
                 </div>
             </div>

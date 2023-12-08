@@ -186,6 +186,14 @@ form .form-row .textarea{
     color: #f1f2ef;
 }
 
+.notification {
+    background-color: #dff0d8;
+    border: 1px solid #3c763d;
+    color: #3c763d;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
 
 @media (max-width: 700px) {
     .contact-form1 {
