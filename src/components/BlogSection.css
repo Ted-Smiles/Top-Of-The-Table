@@ -2,6 +2,8 @@
   padding: 4rem;
   color: #768063;
   background: #e2e5da;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -121,10 +123,10 @@ h2 {
 
 @media only screen and (max-width: 924px) {
   .blog {
-    padding: 10px;
+    padding: 20px;
   }
   .blog__container {
-    width: 90%;
+    width: 100%;
   }
   .cards__item {
     margin-bottom: 2rem;
