@@ -1,51 +1,48 @@
-  /* FullscreenImageModal.css */
-.modal {
+/* FullscreenImageModal.css */
+.fullscreen-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* Darken the background */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1000; /* Set a high z-index value */
 }
 
-.modal img {
-    width: 120vh;
-    height: 100%;
-    object-fit: contain;
-    border: 1px solid #fff;
+.fullscreen-modal {
+    position: relative;
+    width: 80%; /* Set a percentage width for the modal */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    height: auto; /* Allow the height to adjust based on the content */
+    max-height: 80vh; /* Set a maximum height as a percentage of viewport height */
+    overflow: hidden;
+    background: #fff; /* White background for the modal */
+    border-radius: 8px;
+    border: 1px solid white;
+    z-index: 1001; /* Set a higher z-index value than other elements */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
 }
 
-.close-btn {
+.close-modal {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
+    font-size: 32px;
+    color: #fff; /* Close button color */
     cursor: pointer;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 50px; /* Increase the font size for better visibility */
-    z-index: 1001;
+    z-index: 1002; /* Set a higher z-index value than other elements */
 }
 
-.close-btn:hover {
-    color: #ff0000; /* Change the color on hover for emphasis */
-}
-
-/* Add padding or margin to create space around the modal content */
-.modal-content {
-    padding: 200px;
-    text-align: center;
-}
-
-@media screen and (max-width: 820px) {
-    .modal img {
-        width: 60vh;
-    }
-    .close-btn{
-        font-size: 30px;
-    }
+.fullscreen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire modal */
+    display: block; /* Remove extra spacing */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    z-index: 1003; /* Set a higher z-index value than other elements */
 }
