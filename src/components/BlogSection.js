@@ -18,7 +18,7 @@ function BlogSection() {
                 'https://api-eu-west-2.hygraph.com/v2/clox175hi80uw01uqdjf6980x/master',
                 `
             {
-                posts {
+                posts (orderBy: createdAt_DESC) {
                     id,
                     title,
                     datePublished,
@@ -34,8 +34,7 @@ function BlogSection() {
             }
         `
             )
-            const post = posts.reverse()
-            setPosts(post)
+            setPosts(posts)
         }
         fetchPosts()
     }, [])
