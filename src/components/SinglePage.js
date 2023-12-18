@@ -1,23 +1,19 @@
-import React, { useEffect, useState } from 'react'
-import './BlogSection.css';
+// SinglePage.js
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import request from 'graphql-request';
-
-/**
- * Single page for each blog when called
- */
+import './SinglePage.css';
 
 export default function SinglePage() {
+  const [posts, setPosts] = useState(null);
+  const { slug } = useParams();
 
-    const a = 1
-
-    const [posts, setPosts] = useState(null)
-
-    useEffect(() => {
-        const fetchPosts = async () => {
-            const { posts } = await request(
-                'https://api-eu-west-2.hygraph.com/v2/clox175hi80uw01uqdjf6980x/master',
-                `
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await request(
+          'https://api-eu-west-2.hygraph.com/v2/clox175hi80uw01uqdjf6980x/master',
+          `
             {
                 posts {
                     id,
@@ -34,43 +30,41 @@ export default function SinglePage() {
                 }
             }
         `
-            )
-            const post = posts.reverse()
-            setPosts(post)
-        }
-        fetchPosts()
-    }, [])
+        );
+        const postList = response.posts.reverse();
+        setPosts(postList);
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      }
+    };
 
-    const { slug } = useParams();
+    fetchPosts();
+  }, []);
 
-    if (posts === null) {
+  if (!posts) {
+    return (
+        <div className='loading-blog-post'>
+          <h1 className="blog-post__title">Loading...</h1>
+        </div>
+      );
+  }
 
-    } else {
-        for (let i = 0; i < posts.length; i++) {
-            if (posts[i].slug === slug) {
-                const a = i
-            }
-        }
-    }
-            return (
-                <div className='blog'>
-                    {posts === null ? 
-                        (<h1>Loading</h1>) : 
-                        (<h1>{posts[a].title}</h1>)
-                    }
-                    <div className="blog__container">
-                        <div className="blog__wrapper">
-                            {posts === null ? 
-                                (<img className="cards__item__img" src="" alt='Test' />) : 
-                                (<img className="cards__item__img" src={posts[a].coverPhoto.url} alt='Test' />)
-                            }
+  const postIndex = posts.findIndex(post => post.slug === slug);
 
-                        </div>
-                    </div>
-                </div>
-            )
+  if (postIndex === -1) {
+    return <h1>Post not found</h1>;
+  }
 
+  const post = posts[postIndex];
 
+  return (
+    <div className='blog-post'>
+      <h1 className="blog-post__title">{post.title}</h1>
+      <div className="blog-post__container">
+        <div className="blog-post__wrapper">
+          <div className="blog-post__content" dangerouslySetInnerHTML={{ __html: post.content.html }} />
+        </div>
+      </div>
+    </div>
+  );
 }
-
-// (<h3>{posts[a].datePublished}</h3>)

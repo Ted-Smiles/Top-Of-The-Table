@@ -38,7 +38,7 @@ function Footer() {
 
         <section className="social-media">
             <div className="social-media-wrap">
-                <img className="social-logo" src='images/Logo.png' alt='Logo' />   
+                <img className="social-logo" src='./images/Logo.png' alt='Logo' />   
             </div>             
             <div className="social-media-wrap2">
                 <small className='website-rights'>Top Of The Table Minis</small> 

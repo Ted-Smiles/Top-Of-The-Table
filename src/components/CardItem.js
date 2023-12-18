@@ -38,7 +38,9 @@ const CardItem = (props) => {
     }, [isModalOpen]);
 
     const openModal = () => {
-        setIsModalOpen(true);
+        if (props.enableFullscreen) {
+            setIsModalOpen(true);
+        }
     };
 
     const closeModal = () => {
@@ -48,19 +50,35 @@ const CardItem = (props) => {
     return (
         <>
             <li className='cards__item'>
-                <div className="cards__item__link" onClick={openModal}>
-                    <figure className='cards__item__pic-wrap'>
-                        <img src={props.src} alt={props.alt} className="cards__item__img" />
-                    </figure>
-                    <figure className='cards__item__text-wrap'>
-                        <div className="cards__item__info">
-                            <h3 className="cards__item__title">{props.title}</h3>
-                            {props.date && <h4 className="cards__item__date">{props.date}</h4>}
-                            <h5 className="cards__item__text"><br />{props.text}</h5>
-                            {props.action && <h5 className="cards__item__read">{props.action}</h5>}
-                        </div>
-                    </figure>
-                </div>
+                {props.enableFullscreen ? (
+                    <div className="cards__item__link" onClick={openModal}>
+                        <figure className='cards__item__pic-wrap'>
+                            <img src={props.src} alt={props.alt} className="cards__item__img" />
+                        </figure>
+                        <figure className='cards__item__text-wrap'>
+                            <div className="cards__item__info">
+                                <h3 className="cards__item__title">{props.title}</h3>
+                                {props.date && <h4 className="cards__item__date">{props.date}</h4>}
+                                <h5 className="cards__item__text"><br />{props.text}</h5>
+                                {props.action && <h5 className="cards__item__read">{props.action}</h5>}
+                            </div>
+                        </figure>
+                    </div>
+                ) : (
+                    <Link to={props.path} className="cards__item__link">
+                        <figure className='cards__item__pic-wrap'>
+                            <img src={props.src} alt={props.alt} className="cards__item__img" />
+                        </figure>
+                        <figure className='cards__item__text-wrap'>
+                            <div className="cards__item__info">
+                                <h3 className="cards__item__title">{props.title}</h3>
+                                {props.date && <h4 className="cards__item__date">{props.date}</h4>}
+                                <h5 className="cards__item__text"><br />{props.text}</h5>
+                                {props.action && <h5 className="cards__item__read">{props.action}</h5>}
+                            </div>
+                        </figure>
+                    </Link>
+                )}
             </li>
 
             {isModalOpen && (
@@ -73,6 +91,7 @@ const CardItem = (props) => {
             )}
         </>
     );
-}
-
-export default CardItem;
+    }
+    
+    export default CardItem;
+    

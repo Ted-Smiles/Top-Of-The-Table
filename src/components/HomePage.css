@@ -74,6 +74,34 @@
     margin: 6px;
 }
 
+/* Add these styles to HomePage.css */
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #fff; /* Border color for inactive dots */
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #fff; /* Background color for the active dot */
+    transform: scale(1.5); /* Increase size of the active dot */
+}
+  
+.dot.active.neighbor {
+    background-color: #fff; /* Background color for the active dot */
+    transform: scale(1.5); /* Increase size of the active dot */
+}
+
+.dot.neighbor {
+    transform: scale(1.2);
+}
+    
+
 @media screen and (max-width: 1200px) {
     .home-container > h1 {
         font-size: 80px;

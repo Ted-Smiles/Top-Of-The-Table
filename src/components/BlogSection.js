@@ -48,13 +48,15 @@ function BlogSection() {
             <div className="blog__container">
                 <div className="blog__wrapper">
                     <ul className="blog__items">
-
                         {posts === null ?
-                            (<CardItem
-                                src=""
-                                alt="Loading"
-                                title="Please Wait"
-                            />) :
+                            Array.from({ length: 6 }, (_, index) => (
+                                <CardItem
+                                  key={index}
+                                  src=""
+                                  alt="Loading"
+                                  title="Please Wait"
+                                />
+                            )) :
                             (posts.map(post => <CardItem
                                 src={post.coverPhoto.url}
                                 alt="Blog Photo"

@@ -13,24 +13,24 @@ export default function GallerySection() {
             <div className="cards__container">
                 <div className="cards__wrapper">
                     <ul className="cards__items">
-                        <CardItem 
+                        <CardItem
                             src="./images/P1020221.jpg"
                             title="Genestealer Cults"
                             path="/genstealer-cult"
                         />
-                        <CardItem 
+                        <CardItem
                             src="./images/P1020222-2.jpg"
                             title="Project Leviathan"
                             path="/services"
                         />
                     </ul>
                     <ul className="cards__items">
-                        <CardItem 
+                        <CardItem
                             src="./images/P1020221.jpg"
                             title="Death Korps Of Krieg"
                             path="/services"
                         />
-                        <CardItem 
+                        <CardItem
                             src="./images/P1020222-2.jpg"
                             title="Chaos Daemons"
                             path="/choas-daemons"
