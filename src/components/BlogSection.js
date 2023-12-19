@@ -3,6 +3,7 @@ import CardItem from './CardItem'
 import './BlogSection.css'
 import './Cards.css'
 import request from 'graphql-request'
+import LoadingIcon from './LoadingIcon'
 
 /**
  * Front-page for blog page - fetches blog data found from Hygraph which it uses to create blog cards
@@ -49,12 +50,7 @@ function BlogSection() {
                     <ul className="blog__items">
                         {posts === null ?
                             Array.from({ length: 6 }, (_, index) => (
-                                <CardItem
-                                  key={index}
-                                  src=""
-                                  alt="Loading"
-                                  title="Please Wait"
-                                />
+                                <LoadingIcon key={index} />
                             )) :
                             (posts.map(post => <CardItem
                                 src={post.coverPhoto.url}

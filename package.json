@@ -61,6 +61,6 @@
     "gh-pages": "^6.0.0",
     "react-scripts": "^5.0.1",
     "ts-node": "^10.9.1",
-    "typescript": "^5.3.2"
+    "typescript": "^5.3.3"
   }
 }
