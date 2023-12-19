@@ -6,31 +6,41 @@ import axios from 'axios';
  */
 
 function ContactForm() { 
-    
+
     const [emailSent, setEmailSent] = useState(false);
-    const [firstName, setFirstName] = useState('Ted')
-    const [lastName, setLastName] = useState('Smiles')
-    const [email, setEmail] = useState('tedsmiles01@gmail.com')
-    const [message, setMessage] = useState('Hi this is a test')
+    const [emailError, setEmailError] = useState(null);
+    const [firstName, setFirstName] = useState('Ted');
+    const [lastName, setLastName] = useState('Smiles');
+    const [email, setEmail] = useState('tedsmiles01@gmail.com');
+    const [message, setMessage] = useState('Hi, this is a test');
 
     const onSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         console.log("data", firstName, lastName, email, message)
 
-        try { 
+        try {
             const res = await axios.post('http://localhost:3001/send-email', {
                 method: 'POST',
                 body: ({
                     firstName, lastName, email, message
                 }),
                 headers: {
-                    'content-type': 'application/json'
+                    'Content-Type': 'application/json',
                 }
-            }); setEmailSent(true);
-        } catch(error) {
-            console.error('Error sending email: ', error)
+            }); 
+
+            if (res.status === 200) {
+                setEmailSent(true);
+                setEmailError(null); // Clear any previous error
+            } else {
+                setEmailError('Error sending email. Please try again later.');
+            }
+        } catch (error) {
+            console.error('Error sending email: ', error);
+            setEmailError('Error sending email. Please try again later.');
         }
-    }
+    };
+
 
     return (
         <div className="contact-form1">
@@ -76,6 +86,7 @@ function ContactForm() {
                                 <input type="submit" value="submit" />
                         </div>
                     </div>
+                    {emailError && <div className="error-message">{emailError}</div>}
                     {emailSent && <div className="notification">Email sent successfully!</div>}
                     </form>
                 </div>
