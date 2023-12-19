@@ -1,0 +1,35 @@
+/* Add this to your styles.css or styles.scss file */
+
+.loading-icon {
+    display: flex;
+    flex: 1;
+    margin: 0 1rem;
+    border-radius: 10px;
+  }
+  
+  .loading-icon-link {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    box-shadow: 0 6px 20px #768063;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .loading-icon-pic-wrap {
+    position: relative;
+    width: 100%;
+    padding: 20% 0%;
+    overflow: hidden;
+  }
+  
+  .loading-icon-info {
+    padding: 25px 30px 25px;
+  }
+  
+  .loading-icon-text {
+    color: #768063;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  

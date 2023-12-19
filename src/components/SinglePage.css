@@ -1,0 +1,81 @@
+/* SinglePage.css */
+.blog-post {
+    max-width: 100%;
+    color: #768063; /* Use the text color from .cards */
+    background-color: #e2e5da; /* Use the background color from .cards */
+    padding-top: 30px;
+  }
+  
+  .loading-blog-post {
+    height: 90vh;
+    color: #768063;
+    background-color: #e2e5da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Optional: Align text to center within the div */
+  }
+  
+  
+  .blog-post__container {
+    overflow: hidden;
+    width: 100%;
+    
+  }
+
+  .blog-post__container img {
+    width: auto;
+    max-width: 100%;
+    max-height: 500px;
+    border: 2px solid #768063;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  .blog-post__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .blog-post__content img {
+    width: auto;
+    max-width: 100%;
+    max-height: 300px;
+    border: 2px solid #768063;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  .blog-post__content {
+    padding: 20px;
+    text-align: justify;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  
+  /* Font sizes and colors for text content */
+  .blog-post__content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .blog-post__content h1 {
+    font-size: 60px; /* Use the font size from .cards */
+    text-align: center;
+  }
+  
+  .blog-post__content h2 {
+    font-size: 32px; /* Use the font size from .cards__item__title */
+    margin-bottom: 20px; /* Use the margin from .cards__item__title */
+  }
+  
+  .blog-post__content h3 {
+    font-size: 24px; /* Use the font size from .cards__item__text */
+    margin-bottom: 18px; /* Use the margin from .cards__item__text */
+  }
