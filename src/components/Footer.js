@@ -21,9 +21,10 @@ function Footer() {
             </p>
             <div className="input-areas">
                 <form action="">
-                    <input type="email" name='email' placeholder='Your Email' className='footer-input'/>
-                    <Button buttonStyle='btn--outline'>Subscribe</Button> 
+                    <input type="text" name='name' placeholder='Your First Name' className='footer-input'  required />
+                    <input type="email" name='email' placeholder='Your Email' className='footer-input'required/>
                 </form>
+                <Button buttonStyle='btn--outline'>Subscribe</Button> 
             </div>
         </section>
         {/* <div className="footer-links">

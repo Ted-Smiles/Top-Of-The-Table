@@ -33,14 +33,7 @@
     line-height: 24px;
   }
   
-  @media only screen and (min-width: 923px) {
-    .loading-icon {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-row-gap: 35px;
-      grid-column-gap: 0px;
-    }
-  }
+
 
   @media only screen and (min-width: 923px) {
     .cards__items {
