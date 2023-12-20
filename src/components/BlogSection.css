@@ -136,21 +136,5 @@ h2 {
 
   .cards__item__info{
     padding: 20px 10px 20px ;
-}
-
-  .cards__item2 {
-    margin-top: 8rem;
-    margin-bottom: 2rem;
-    margin-left: 0px;
-    width: 100%;
-  }
-
-  .cards__item2__pic-wrap::after {
-    font-size: 20px;
-  }
-
-  .cards__item2__text {
-    color: #768063;
-    font-size: 30px;
   }
 }
