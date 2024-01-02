@@ -35,7 +35,7 @@
   }
   
   .footer-input {
-    padding: 8px 20px;
+    padding: 8px 8px;
     border-radius: 2px;
     margin-right: 10px;
     outline: none;
@@ -92,6 +92,17 @@
   .footer-input::placeholder {
     color: #b1b1b1;
   }
+  .chaptcha-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .g-recaptcha {
+    margin-bottom: 10px;
+}
   
   /* Social Icons */
   .social-icon-link {

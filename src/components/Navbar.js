@@ -35,7 +35,7 @@ function Navbar() {
         <nav className="navbar">
             <div className="navbar-container">
                 <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                  <img className='Navlogo' src='./images/Logo.jpg' alt='Logo'/>TOP OF THE TABLE 
+                  <img className='Navlogo' src='../images/Logo.jpg' alt='Logo'/>TOP OF THE TABLE 
                 </Link>
                 <div className="menu-icon" onClick={handleClick}>
                   <FontAwesomeIcon icon={ click ? faTimes : faBars } />

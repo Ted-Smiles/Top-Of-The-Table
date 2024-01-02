@@ -59,9 +59,9 @@ export default function SinglePage() {
 
   return (
     <div className='blog-post'>
-      <h1 className="blog-post__title">{post.title}</h1>
       <div className="blog-post__container">
         <div className="blog-post__wrapper">
+          <h1 className="blog-post__title">{post.title}</h1>
           <div className="blog-post__content" dangerouslySetInnerHTML={{ __html: post.content.html }} />
         </div>
       </div>

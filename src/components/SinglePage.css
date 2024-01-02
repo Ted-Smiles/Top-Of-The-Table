@@ -38,6 +38,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 60px;
   }
   
   .blog-post__content img {
@@ -52,7 +53,6 @@
   }
   
   .blog-post__content {
-    padding: 20px;
     text-align: justify;
     overflow: hidden;
     word-wrap: break-word;
@@ -60,22 +60,25 @@
   
   /* Font sizes and colors for text content */
   .blog-post__content p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     margin-bottom: 15px;
   }
   
-  .blog-post__content h1 {
+  .blog-post__title {
     font-size: 60px; /* Use the font size from .cards */
     text-align: center;
+    margin-bottom: 40px;
   }
   
   .blog-post__content h2 {
-    font-size: 32px; /* Use the font size from .cards__item__title */
-    margin-bottom: 20px; /* Use the margin from .cards__item__title */
+    font-size: 36px; /* Use the font size from .cards__item__title */
+    margin: 20px 0px; /* Use the margin from .cards__item__title */
+    text-align: center;
   }
   
   .blog-post__content h3 {
-    font-size: 24px; /* Use the font size from .cards__item__text */
+    font-size: 28px; /* Use the font size from .cards__item__text */
     margin-bottom: 18px; /* Use the margin from .cards__item__text */
+    text-align: center;
   }
