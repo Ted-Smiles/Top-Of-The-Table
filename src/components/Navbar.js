@@ -66,15 +66,15 @@ function Navbar() {
                       Contact
                     </Link>
                   </li>
-                  <li className='nav-item'>
+                  {/*<li className='nav-item'>
                     <Link to="/sign-up" className="nav-links-mobile" onClick={closeMobileMenu} >
                       Sign Up
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
-                <Link to="/sign-up" onClick={closeMobileMenu} >
+                {/*<Link to="/sign-up" onClick={closeMobileMenu} >
                   {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
-                </Link>
+                </Link> */}
             </div>
         </nav>
     </>
