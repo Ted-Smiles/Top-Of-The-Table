@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop'
 const Home = lazy(() => import ('./pages/Home'))
 const Gallery = lazy (() => import ('./pages/Gallery'))
-const ChoasDaemons = lazy (() => import ('./pages/ChoasDaemons'))
 const Services = lazy(() => import ('./pages/Services'))
 const Contact = lazy (() => import ('./pages/Contact'))
 const SignUp = lazy (() => import ('./pages/SignUp'))
@@ -27,7 +26,6 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/choas-daemons" element={<ChoasDaemons />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<SingleBlog />} />
             <Route path="/contact" element={<Contact />} />

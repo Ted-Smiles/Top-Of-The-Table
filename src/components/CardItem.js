@@ -53,7 +53,7 @@ const CardItem = (props) => {
                 {props.enableFullscreen ? (
                     <div className="cards__item__link" onClick={openModal}>
                         <figure className='cards__item__pic-wrap'>
-                            <img src={props.src} alt={props.alt} className="cards__item__img" />
+                            <img src={props.src} alt={props.alt} className="cards__item__img" onClick={props.onClick}/>
                         </figure>
                         <figure className='cards__item__text-wrap'>
                             <div className="cards__item__info">
