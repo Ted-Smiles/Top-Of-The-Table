@@ -19,14 +19,14 @@ app.post('/send-email', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'tedsmiles01@gmail.com', 
+      user: 'tedsmiles01@gmail.com', // This is the email that sends the reply (Make a DO NOT REPLY email address ?)
       pass: 'ancv dcav sdfu gslu', 
     },
   });
 
   // Set up email options
   const mailOptions = {
-    to: 'ted@smilesfamily.co.uk', // replace with the recipient's email
+    to: 'ted@smilesfamily.co.uk', // replace with the Charlie's email
     subject: 'New Contact Form Submission',
     text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nMessage: ${message}`,
   };

@@ -83,6 +83,16 @@ h1 {
   line-height: 24px;
 }
 
+.cards__item__read {
+margin-top: 24px;
+font-size: 26px;
+}
+
+.cards__item__info:hover > .cards__item__read {
+  text-decoration: underline;
+  color: #5e665c
+}
+
 .cards__item__title {
   color: #768063;
   font-size: 32px;
